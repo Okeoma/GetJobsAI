@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as o,o as s,s as t}from"./app-DttZW8gq.js";const d={},a={class:"border border-purple-600 dark:border-purple-800 rounded-md p-4 shadow-lg dark:text-gray-300"};function c(r,n){return s(),o("div",a,[t(r.$slots,"default")])}const _=e(d,[["render",c]]);export{_ as B};
