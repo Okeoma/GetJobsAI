@@ -74,3 +74,5 @@ jobs:
       # 🔟 Run PHPUnit Tests
       - name: Run Tests
         run: ./vendor/bin/phpunit
+
+      # 🔟 End of Tests
