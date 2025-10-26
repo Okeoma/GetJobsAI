@@ -7,15 +7,17 @@ use Illuminate\Http\Request;
 
 class MyInterviewsController extends Controller
 {
-public function index(Request $request){
-$interviews = $request->user()->interviews()->latest()->paginate(10)->withQueryString();
+    public function index(Request $request)
+    {
+        $interviews = $request->user()->interviews()->latest()->paginate(10)->withQueryString();
 
-return inertia('MyInterview/Index', ['interviews' => $interviews]);
+        return inertia('MyInterview/Index', ['interviews' => $interviews]);
 
-}
+    }
 
-public function show(Interview $my_interview){
+    public function show(Interview $my_interview)
+    {
 
-    return inertia('MyInterview/Show', ['interview' => $my_interview]);
-}
+        return inertia('MyInterview/Show', ['interview' => $my_interview]);
+    }
 }

@@ -22,12 +22,12 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Eromosele Okoudoh',
-             'email' => 'eromosele.okoudoh@gmail.com',
-            
-          ]);
-          User::factory()->create([
-             'name' => 'Jude James',
-              'email' => 'judejames@gmail.com',
-           ]);
+            'email' => 'eromosele.okoudoh@gmail.com',
+
+        ]);
+        User::factory()->create([
+            'name' => 'Jude James',
+            'email' => 'judejames@gmail.com',
+        ]);
     }
 }

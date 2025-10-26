@@ -15,11 +15,11 @@ return new class extends Migration
         Schema::create('cvs', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained('users');
-        $table->string('original_cv_path');
-        $table->string('optimized_cv_path')->nullable();
-        $table->integer('score')->nullable();
-        $table->text('recommendation')->nullable();
-        $table->timestamps();
+            $table->string('original_cv_path');
+            $table->string('optimized_cv_path')->nullable();
+            $table->integer('score')->nullable();
+            $table->text('recommendation')->nullable();
+            $table->timestamps();
         });
     }
 

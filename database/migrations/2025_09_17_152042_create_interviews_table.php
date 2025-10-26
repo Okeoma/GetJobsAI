@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('interviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id'); 
+            $table->foreignId('user_id');
             $table->string('job_title');
             $table->json('ideal_answer');
-            $table->integer('score'); 
+            $table->integer('score');
             $table->json('answer');
             $table->json('questions');
             $table->timestamps();

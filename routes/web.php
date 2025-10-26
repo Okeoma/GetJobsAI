@@ -10,7 +10,6 @@ use App\Http\Controllers\UserAccount;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
-use OpenAI\Laravel\Facades\OpenAI;
 
 Route::get('/', function () {
     return Inertia::render('Home');
@@ -24,9 +23,10 @@ Route::resource('dashboard', DashboardController::class)->only(['index'])->middl
 Route::resource('cv', CVOptimizerController::class)->only(['index', 'create', 'store', 'show', 'destroy'])->middleware('auth');
 Route::resource('jobs', JobController::class)->only(['index'])->middleware('auth');
 Route::get('/cv/{cv}/download', function (\App\Models\Cv $cv) {
-    if (!Storage::disk('public')->exists($cv->original_cv_path)) {
+    if (! Storage::disk('public')->exists($cv->original_cv_path)) {
         abort(404);
     }
+
     return Storage::disk('public')->download($cv->original_cv_path);
 })->name('download');
 

@@ -47,10 +47,13 @@ class User extends Authenticatable
         ];
     }
 
-    public function cvs(): HasMany{
+    public function cvs(): HasMany
+    {
         return $this->hasMany(Cv::class);
     }
-    public function interviews(): HasMany{
+
+    public function interviews(): HasMany
+    {
         return $this->hasMany(Interview::class);
     }
 }
